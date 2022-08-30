@@ -263,6 +263,23 @@ footer {
   text-decoration: none;
   color: #b9b9b9;
 }
+.footer-social {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2.5rem;
+}
+.icon {
+  font-size: 30px;
+  color: #ced4da;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.icon:hover {
+  transform: scale(1.15);
+  color: #adb5bd;
+}
 
 /*----------------------
  Media Queries for tablet device or medium view
