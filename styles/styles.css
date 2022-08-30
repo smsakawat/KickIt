@@ -53,7 +53,7 @@ header,
 }
 .main-title {
   font-weight: 700;
-  font-size: 42px;
+  font-size: 64px;
   line-height: 1.1;
   margin-bottom: 20px;
   letter-spacing: -1px;
@@ -61,7 +61,7 @@ header,
 .main-details {
   margin-bottom: 30px;
   line-height: 1.5;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .banner-img {
@@ -74,8 +74,14 @@ header,
   margin-bottom: -4px;
   height: auto;
 }
+
 .header-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 /* Blogs Styles */
@@ -103,8 +109,9 @@ header,
   border-radius: 10px;
   color: #000;
   padding: 1rem 1.75rem;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 500;
+  text-align: center;
 }
 .nav-active {
   background-color: var(--primary-color);
@@ -243,6 +250,13 @@ footer {
   .container {
     margin-bottom: 4rem;
   }
+  /* Header styles */
+  .main-title {
+    font-size: 40px;
+  }
+  .main-details {
+    font-size: 14px;
+  }
   /* COMPONENT STYLES*/
   /* Blog Styles */
   .blog-section {
@@ -261,7 +275,7 @@ footer {
   .side-btn {
     border: 1px solid #e8e8e8;
   }
-  .side-btn:last-child {
+  .nav-active {
     border: none;
   }
   .side-navigation {
@@ -275,13 +289,18 @@ footer {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-/*-----------------------
+/* -----------------------
 Media Quries for Mobile Devices
 ---------------------------- */
 @media only screen and (max-width: 576px) {
-  /* Banner Styles */
+  /* COMMON STYLES */
+  header,
+  .container {
+    margin-bottom: 24px;
+  }
+  /* Heder Styles */
   .banner {
-    padding: 2rem 2.25rem;
+    padding: 2rem 2.25rem 0;
     flex-direction: column;
     text-align: center;
     gap: 20px;
@@ -300,16 +319,48 @@ Media Quries for Mobile Devices
   .main-details {
     color: rgba(255, 255, 255, 0.8);
   }
+
+  .banner-img {
+    align-items: center;
+  }
+  .btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .header-btn {
     margin-bottom: 0;
     white-space: nowrap;
   }
-  .banner-img {
-    align-items: center;
+  .blog-section {
+    flex-direction: column;
+    gap: 30px;
   }
-
-  main,
-  footer {
-    display: none;
+  .side-navigation {
+    width: 100%;
+    background-color: #fff;
+  }
+  .side-btn {
+    border: 1px solid #e8e8e8;
+  }
+  .nav-active {
+    border: none;
+  }
+  .side-navigation {
+    padding-bottom: 0;
+  }
+  .banner-img {
+    align-self: center;
+  }
+  .header-btn {
+    margin: 0 auto;
+  }
+  /* Blogs Styles */
+  .blogs {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  /* Upcoming Styles */
+  .matches {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
